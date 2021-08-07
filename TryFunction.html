@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Get21()
+        {
+            console.log('into Gen21');
+            return 21;
+            console.log('Leave AVoid');
+        }
+        var val1 = Get21();
+        console.log(val1);
+
+        function AVoid()
+        {
+            console.log('into AVoid')
+            return;
+            console.log('leave AVoid');
+        }
+        var val2 = AVoid()
+        console.log(val2);
+
+        console.log(Get21.name);
+
+        //變數寫法
+        var func1 = function(strx)
+        {
+            alert(strx);
+        }
+        func1("Hello");
+        console.log(func1)
+
+    </script>
+</body>
+</html>

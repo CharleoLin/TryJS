@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <span class="c1">123</span>
+        <span>456</span>
+        <span class="c1">789</span>
+        <span>456</span>
+        <span>456</span>
+        <span>456</span>
+    </div>
+
+    <script>
+        var d1 = document.getElementById("div1");
+        d1.children[2].innerHTML = "123";
+
+        var list = document.getElementsByTagName("span");
+        var colorArr = ["red", "blue","green" ];
+
+        for(var i = 0; i < list.length; i++)
+        {
+            var item = list[i];
+            list[i].style = "color:" + colorArr[i % 3] + ";";
+            list[i].onclick = function()
+            {
+                console.log(i);
+                list[i].style = "color: yellow;";
+            }
+        }
+
+        var list2 = document.getElementsByClassName("c1");
+        for(var i = 0; i < list2.length; i++)
+        {
+            list2[i].style = "background-color:aquamarine;";
+        }
+        console.log("after second loop:" + i)
+
+    </script>    
+</body>
+</html>
